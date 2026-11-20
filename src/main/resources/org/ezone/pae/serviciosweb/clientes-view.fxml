@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane
+        xmlns="http://javafx.com/javafx/21"
+        xmlns:fx="http://javafx.com/fxml/1"
+        fx:controller="org.ezone.pae.serviciosweb.controller.ClienteController"
+        prefWidth="1150" prefHeight="650">
+
+    <padding>
+        <Insets top="18" right="18" bottom="18" left="18"/>
+    </padding>
+
+    <top>
+        <VBox spacing="12">
+
+            <padding>
+                <Insets bottom="15"/>
+            </padding>
+
+            <Label text="Consulta de clientes - Servicio privado">
+                <font>
+                    <Font name="System Bold" size="19"/>
+                </font>
+            </Label>
+
+            <Label text="Consulta y visualización de información financiera"
+                   style="-fx-text-fill: #666666;"/>
+
+            <HBox alignment="CENTER_LEFT" spacing="12">
+
+                <Button fx:id="btnConsultar"
+                        text="Consultar clientes"
+                        onAction="#consultarClientes"/>
+
+                <Label fx:id="lblEstado"
+                       text="Presione Consultar clientes"/>
+
+            </HBox>
+
+        </VBox>
+    </top>
+
+    <center>
+        <TableView fx:id="tblClientes" prefHeight="500">
+
+            <columns>
+                <TableColumn fx:id="colId"
+                             text="ID" prefWidth="60"/>
+
+                <TableColumn fx:id="colNombre"
+                             text="Nombre" prefWidth="130"/>
+
+                <TableColumn fx:id="colApellido"
+                             text="Apellido" prefWidth="140"/>
+
+                <TableColumn fx:id="colCorreo"
+                             text="Correo" prefWidth="220"/>
+
+                <TableColumn fx:id="colTelefono"
+                             text="Teléfono" prefWidth="140"/>
+
+                <TableColumn fx:id="colNacimiento"
+                             text="Fecha de nacimiento" prefWidth="160"/>
+
+                <TableColumn fx:id="colPais"
+                             text="País" prefWidth="120"/>
+
+                <TableColumn fx:id="colCiudad"
+                             text="Ciudad" prefWidth="130"/>
+
+                <TableColumn fx:id="colDireccion"
+                             text="Dirección" prefWidth="210"/>
+
+                <TableColumn fx:id="colIngreso"
+                             text="Ingreso anual" prefWidth="130"/>
+
+                <TableColumn fx:id="colPuntaje"
+                             text="Puntaje crediticio" prefWidth="140"/>
+
+                <TableColumn fx:id="colDeuda"
+                             text="Deuda pendiente" prefWidth="140"/>
+
+                <TableColumn fx:id="colMontoDeuda"
+                             text="Monto de deuda" prefWidth="140"/>
+
+                <TableColumn fx:id="colEstado"
+                             text="Estado" prefWidth="110"/>
+
+                <TableColumn fx:id="colCreacion"
+                             text="Fecha de creación" prefWidth="270"/>
+
+                <TableColumn fx:id="colActualizacion"
+                             text="Última actualización" prefWidth="270"/>
+            </columns>
+
+            <placeholder>
+                <Label text="No hay clientes cargados."/>
+            </placeholder>
+
+        </TableView>
+    </center>
+
+</BorderPane>
